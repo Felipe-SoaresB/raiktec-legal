@@ -3,10 +3,15 @@ html{scroll-behavior:smooth}
 body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:#0b0d10;color:#e7e9ee}
 a{color:inherit;text-decoration:none}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+/* NAV / HEADER */
 .nav{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:rgba(11,13,16,.7);border-bottom:1px solid #1a1f26;z-index:50}
-.nav .container{display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav .container{display:flex;align-items:center;justify-content:space-between;height:70px}
+.brand-logo{height:48px;display:block}        /* logo maior no topo */
 .nav nav a{margin-left:18px;padding:8px 10px;border-radius:10px;color:#cbd5e1}
 .nav nav a:hover{background:#1a1f26;color:#fff}
+
+/* HERO */
 .hero{padding:72px 0 40px;background:radial-gradient(1200px 600px at 80% -10%,#1a1f26 0,#0b0d10 60%)}
 .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
 .hero h1{font-size:44px;margin:0 0 12px}
@@ -16,6 +21,8 @@ a{color:inherit;text-decoration:none}
 .btn.primary{background:#3b82f6;border-color:#3b82f6;color:#fff}
 .btn.ghost{background:transparent;color:#cbd5e1}
 .logo-hero{max-width:100%;height:auto;filter:drop-shadow(0 10px 30px rgba(0,0,0,.35))}
+
+/* SECTIONS */
 .section{padding:64px 0}
 .section.alt{background:#0f1217;border-top:1px solid #1a1f26;border-bottom:1px solid #1a1f26}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
@@ -23,22 +30,25 @@ a{color:inherit;text-decoration:none}
 .card{background:#0c0f14;border:1px solid #1a1f26;border-radius:16px;padding:18px}
 .list{padding-left:16px}
 .list li{margin:6px 0;color:#cbd5e1}
-.footer{padding:20px 0;border-top:1px solid #1a1f26;color:#9aa4b2}
-.footer .container{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
-.socials a{margin-left:14px;color:#9aa4b2}
-.muted{color:#9aa4b2}
-.small{font-size:12px}
-.whats{position:fixed;right:18px;bottom:18px;background:#22c55e;color:#0a0f0c;padding:12px 16px;border-radius:999px;border:1px solid #1b3a29;box-shadow:0 10px 24px rgba(0,0,0,.25)}
-.whats:hover{transform:translateY(-2px)}
 
-@media(max-width:900px){
-  .hero-inner{grid-template-columns:1fr}
-  .grid-2{grid-template-columns:1fr}
-  .cards{grid-template-columns:1fr}
-  .nav nav a{margin-left:8px}
+/* FORM (alinhado e consistente) */
+.form{display:flex;flex-direction:column;gap:10px}
+.form h3{margin-top:0;margin-bottom:6px}
+.form label{font-size:14px;color:#cbd5e1}
+.form input,.form textarea{
+  width:100%;
+  margin-top:4px;
+  background:#0b0f14;
+  border:1px solid #233040;
+  border-radius:10px;
+  padding:10px 12px;
+  color:#e7e9ee;
+  outline:none;
 }
+.form input:focus,.form textarea:focus{border-color:#3b82f6}
+.form button{margin-top:6px}
 
-/* Pricing Section */
+/* PRICING */
 .pricing{margin-top:20px}
 .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .price-card{background:#0c0f14;border:1px solid #1f2630;border-radius:16px;padding:20px}
@@ -46,7 +56,21 @@ a{color:inherit;text-decoration:none}
 .price{font-size:18px;color:#e7e9ee;margin:6px 0 12px}
 .price-card ul{margin:0 0 16px 18px;color:#cbd5e1}
 .price-card.destaque{border-color:#3b82f6;box-shadow:0 0 0 1px #3b82f6 inset}
-@media(max-width:900px){.price-grid{grid-template-columns:1fr}}
 
-/* Header logo tweak */
-.nav .brand img{filter:brightness(1.15)}
+/* FOOTER com CNPJ */
+.footer{padding:20px 0;border-top:1px solid #1a1f26;color:#9aa4b2}
+.footer-wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.footer .legal{display:flex;gap:16px;flex-wrap:wrap}
+.socials a{margin-left:14px;color:#9aa4b2}
+
+/* FLOAT WHATS */
+.whats{position:fixed;right:18px;bottom:18px;background:#22c55e;color:#0a0f0c;padding:12px 16px;border-radius:999px;border:1px solid #1b3a29;box-shadow:0 10px 24px rgba(0,0,0,.25)}
+.whats:hover{transform:translateY(-2px)}
+
+/* RESPONSIVO */
+@media(max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .grid-2{grid-template-columns:1fr}
+  .cards,.price-grid{grid-template-columns:1fr}
+  .nav nav a{margin-left:8px}
+}
