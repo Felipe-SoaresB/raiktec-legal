@@ -100,3 +100,12 @@ nav a.active{border-bottom:2px solid #3b82f6;color:#fff}
 @media (max-width:1100px){
   .whats{ right:16px; bottom:24px }
 }
+
+/* ===== Tabelas de planos ===== */
+.table-wrap{overflow:auto;border:1px solid #1a1f26;border-radius:12px;background:#0c0f14}
+.plan-table{width:100%;border-collapse:collapse;min-width:720px}
+.plan-table th,.plan-table td{padding:14px 16px;border-bottom:1px solid #1f2630;text-align:left;vertical-align:top}
+.plan-table thead th{background:#0f1217;color:#e7e9ee;position:sticky;top:0}
+.plan-table tbody tr:hover{background:#0f1217}
+.plan-table td strong{color:#fff}
+
