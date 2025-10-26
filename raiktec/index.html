@@ -17,7 +17,6 @@
   <header class="nav">
     <div class="container">
       <a class="brand" href="#home" aria-label="Raiktec — Início">
-        <!-- Logo branca -->
         <img src="img/raiktec%20fundo%20trans.png" alt="Raiktec" class="brand-logo">
       </a>
       <nav>
@@ -145,21 +144,21 @@
         Instagram: <a href="https://www.instagram.com/raiktec/" target="_blank" rel="noopener">@raiktec</a></p>
       </div>
 
-      <!-- Form alinhado -->
-      <form class="card form" name="contato" method="post">
+      <!-- Form que redireciona para o Gmail -->
+      <div class="card form">
         <h3>Envie uma mensagem</h3>
 
         <label for="nome">Nome</label>
-        <input id="nome" type="text" name="nome" required>
+        <input id="nome" type="text" placeholder="Seu nome">
 
         <label for="email">E-mail</label>
-        <input id="email" type="email" name="email" required>
+        <input id="email" type="email" placeholder="Seu e-mail">
 
         <label for="mensagem">Mensagem</label>
-        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+        <textarea id="mensagem" rows="4" placeholder="Digite sua mensagem"></textarea>
 
-        <button type="submit" class="btn primary">Enviar</button>
-      </form>
+        <a id="btnEnviarEmail" class="btn primary" href="#">Enviar</a>
+      </div>
     </div>
   </section>
 
@@ -190,5 +189,23 @@
   </a>
 
   <script src="js/main.js"></script>
+
+  <!-- Script para abrir Gmail / cliente de e-mail -->
+  <script>
+    document.getElementById('btnEnviarEmail').addEventListener('click', function (e) {
+      e.preventDefault();
+      const nome = document.getElementById('nome').value || '';
+      const email = document.getElementById('email').value || '';
+      const mensagem = document.getElementById('mensagem').value || '';
+
+      const destinatario = 'raiktec.inf@gmail.com';
+      const assunto = encodeURIComponent(`Contato via site - ${nome}`);
+      const corpo = encodeURIComponent(
+        `Nome: ${nome}\nE-mail: ${email}\n\nMensagem:\n${mensagem}`
+      );
+
+      window.location.href = `mailto:${destinatario}?subject=${assunto}&body=${corpo}`;
+    });
+  </script>
 </body>
 </html>
