@@ -15,13 +15,14 @@
 <body>
   <header class="nav">
     <div class="container">
-      <a class="brand" href="#home">
-        <img src="img/raiktec%20fundo%20trans.png" alt="Raiktec" height="36">
+      <a class="brand" href="#home" aria-label="Raiktec — Início">
+        <!-- Logo branca, maior -->
+        <img src="img/raiktec%20fundo%20trans.png" alt="Raiktec" class="brand-logo">
       </a>
       <nav>
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
-        <a href="#portfolio">Portfólio</a>
+        <a href="#portfolio">Planos</a>
         <a href="#contato" class="btn">Contato</a>
       </nav>
     </div>
@@ -134,29 +135,34 @@
         <p>Fale com a Raiktec no WhatsApp e receba um atendimento rápido.</p>
         <p><a class="btn primary" href="https://wa.me/5538998393390?text=Ol%C3%A1%20Raiktec!%20Quero%20um%20or%C3%A7amento." target="_blank" rel="noopener">Chamar no WhatsApp</a></p>
         <p class="muted">Atendimento: seg–sex, 9h–17h (horário de Brasília).<br>
-        E-mail: <a href="mailto:raiktec.inf@gmail.com">raiktec.inf@gmail.com</a></p>
+        E-mail: <a href="mailto:raiktec.inf@gmail.com">raiktec.inf@gmail.com</a><br>
+        Instagram: <a href="https://www.instagram.com/raiktec/" target="_blank" rel="noopener">@raiktec</a></p>
       </div>
-      <form class="card" name="contato" method="post" data-netlify="true">
+
+      <!-- Form alinhado e padronizado -->
+      <form class="card form" name="contato" method="post">
         <h3>Envie uma mensagem</h3>
-        <input type="hidden" name="form-name" value="contato">
-        <label>Nome
-          <input type="text" name="nome" required>
-        </label>
-        <label>E-mail
-          <input type="email" name="email" required>
-        </label>
-        <label>Mensagem
-          <textarea name="mensagem" rows="4" required></textarea>
-        </label>
+        <label for="nome">Nome</label>
+        <input id="nome" type="text" name="nome" required>
+
+        <label for="email">E-mail</label>
+        <input id="email" type="email" name="email" required>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
         <button type="submit" class="btn primary">Enviar</button>
-        <p class="muted small">Formulário compatível com Netlify/GitHub Pages (via serviços externos).</p>
       </form>
     </div>
   </section>
 
   <footer class="footer">
-    <div class="container">
+    <div class="container footer-wrap">
       <span>© <span id="year"></span> Raiktec. Todos os direitos reservados.</span>
+      <div class="legal">
+        <span><strong>Razão Social:</strong> Raiktec Tecnologia LTDA</span>
+        <span><strong>CNPJ:</strong> 00.000.000/0000-00</span>
+      </div>
       <div class="socials">
         <a href="https://www.instagram.com/raiktec/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
         <a href="#" aria-label="Facebook">Facebook</a>
