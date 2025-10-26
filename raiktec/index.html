@@ -22,7 +22,7 @@
       <nav>
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
-        <a href="#planos">Planos</a>
+        <a href="planos.html">Planos</a>
         <a href="#contato" class="btn">Contato</a>
       </nav>
     </div>
@@ -90,45 +90,12 @@
     </div>
   </section>
 
-  <!-- PLANOS -->
+  <!-- PLANOS (teaser com CTA para rota dedicada) -->
   <section id="planos" class="section">
-    <div class="container">
+    <div class="container" style="text-align:center">
       <h2>Planos e Valores</h2>
-      <div class="pricing">
-        <div class="price-grid">
-          <div class="price-card">
-            <h3>Serviço Avulso</h3>
-            <p class="price">a partir de <strong>R$ 79</strong></p>
-            <ul>
-              <li>Formatação com backup</li>
-              <li>Limpeza e troca de pasta térmica</li>
-              <li>Instalação de drivers</li>
-            </ul>
-            <a class="btn primary" href="#contato">Solicitar orçamento</a>
-          </div>
-          <div class="price-card destaque">
-            <h3>Plano Manutenção</h3>
-            <p class="price"><strong>R$ 129/mês</strong></p>
-            <ul>
-              <li>1 visita técnica/mês</li>
-              <li>Suporte remoto incluso</li>
-              <li>Descontos em peças</li>
-            </ul>
-            <a class="btn primary" href="#contato">Assinar</a>
-          </div>
-          <div class="price-card">
-            <h3>Plano Empresarial</h3>
-            <p class="price">personalizado</p>
-            <ul>
-              <li>SLA de atendimento e inventário de TI</li>
-              <li>Monitoramento e backups</li>
-              <li>Visita on-site prioritária</li>
-            </ul>
-            <a class="btn ghost" href="#contato">Falar com consultor</a>
-          </div>
-        </div>
-        <p class="muted small">Valores ilustrativos. Consulte condições e disponibilidade.</p>
-      </div>
+      <p>Conheça nossos planos de manutenção e suporte para empresas e residências.</p>
+      <a href="planos.html" class="btn primary">Ver detalhes dos planos</a>
     </div>
   </section>
 
@@ -144,7 +111,7 @@
         Instagram: <a href="https://www.instagram.com/raiktec/" target="_blank" rel="noopener">@raiktec</a></p>
       </div>
 
-      <!-- Form que redireciona para o Gmail -->
+      <!-- "Form" que abre Gmail/cliente de e-mail -->
       <div class="card form">
         <h3>Envie uma mensagem</h3>
 
@@ -168,14 +135,12 @@
       <div class="footer-col left">
         <span>© <span id="year"></span> Raiktec. Todos os direitos reservados.</span>
       </div>
-
       <div class="footer-col center">
         <span class="legal-line">
           <strong>Razão Social:</strong> 55.316.358 FELIPE SOARES BARBOSA — 
           <strong>CNPJ:</strong> 55.316.358/0001-10
         </span>
       </div>
-
       <div class="footer-col right">
         <a href="https://www.instagram.com/raiktec/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://www.facebook.com/profile.php?id=61566743476724" target="_blank" rel="noopener">Facebook</a>
@@ -188,22 +153,18 @@
     <span>WhatsApp</span>
   </a>
 
-  <script src="js/main.js"></script>
-
-  <!-- Script para abrir Gmail / cliente de e-mail -->
+  <!-- Script inline: ano atual e mailto -->
   <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
     document.getElementById('btnEnviarEmail').addEventListener('click', function (e) {
       e.preventDefault();
       const nome = document.getElementById('nome').value || '';
       const email = document.getElementById('email').value || '';
       const mensagem = document.getElementById('mensagem').value || '';
-
       const destinatario = 'raiktec.inf@gmail.com';
       const assunto = encodeURIComponent(`Contato via site - ${nome}`);
-      const corpo = encodeURIComponent(
-        `Nome: ${nome}\nE-mail: ${email}\n\nMensagem:\n${mensagem}`
-      );
-
+      const corpo = encodeURIComponent(`Nome: ${nome}\nE-mail: ${email}\n\nMensagem:\n${mensagem}`);
       window.location.href = `mailto:${destinatario}?subject=${assunto}&body=${corpo}`;
     });
   </script>
