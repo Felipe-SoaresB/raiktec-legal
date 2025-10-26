@@ -26,15 +26,16 @@
   <section class="section hero" style="text-align:center">
     <div class="container">
       <h1>Planos Empresariais Raiktec ⚙️</h1>
-      <p>Suporte profissional para manter sua empresa funcionando com segurança e agilidade.</p>
+      <p>Suporte profissional para manter sua empresa funcionando com <strong>segurança</strong> e <strong>agilidade</strong>.</p>
     </div>
   </section>
 
+  <!-- Cards dos planos (resumo) -->
   <section class="section">
     <div class="container pricing">
       <div class="price-grid">
         <!-- Avulso -->
-        <div class="price-card">
+        <div class="price-card" id="avulso">
           <h3>Serviço Avulso</h3>
           <p class="price">a partir de <strong>R$79</strong></p>
           <ul>
@@ -46,7 +47,7 @@
         </div>
 
         <!-- Manutenção -->
-        <div class="price-card destaque">
+        <div class="price-card destaque" id="manutencao">
           <h3>Plano Manutenção</h3>
           <p class="price"><strong>R$129/mês</strong></p>
           <ul>
@@ -54,11 +55,11 @@
             <li>Suporte remoto incluso</li>
             <li>Descontos em peças</li>
           </ul>
-          <a class="btn primary" href="https://wa.me/5538998393390?text=Ol%C3%A1!%20Quero%20assinar%20o%20plano%20de%20manuten%C3%A7%C3%A3o%20Raiktec." target="_blank" rel="noopener">Assinar</a>
+          <a class="btn primary" href="#comparativo">Ver detalhes</a>
         </div>
 
         <!-- Empresarial -->
-        <div class="price-card">
+        <div class="price-card" id="empresarial">
           <h3>Plano Empresarial</h3>
           <p class="price">personalizado</p>
           <ul>
@@ -66,25 +67,74 @@
             <li>Monitoramento e backups</li>
             <li>Visita on-site prioritária</li>
           </ul>
-          <a class="btn ghost" href="https://wa.me/5538998393390?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20plano%20empresarial%20Raiktec." target="_blank" rel="noopener">Falar com consultor</a>
+          <a class="btn ghost" href="#comparativo">Ver detalhes</a>
         </div>
       </div>
 
       <p class="muted small" style="margin-top:30px">Valores ilustrativos. Consulte condições e disponibilidade.</p>
+    </div>
+  </section>
 
-      <!-- Seção de Diferenciais (valor agregado) -->
-      <div class="cards" style="margin-top:30px">
+  <!-- Comparativo detalhado dos planos -->
+  <section class="section alt" id="comparativo">
+    <div class="container">
+      <h2 style="text-align:center">Comparativo dos Planos</h2>
+      <p class="muted" style="text-align:center;margin-top:-6px">Escolha pelo <strong>valor entregue</strong> — não apenas pelo número de computadores.</p>
+
+      <div class="table-wrap">
+        <table class="plan-table" aria-describedby="descricao-planos">
+          <thead>
+            <tr>
+              <th>Plano</th>
+              <th>Valor sugerido</th>
+              <th>Ideal para</th>
+              <th>Diferenciais</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Essencial</strong></td>
+              <td>R$149/mês</td>
+              <td>Pequenas empresas (até 5 colaboradores)</td>
+              <td>1 visita mensal + suporte remoto + backup manual</td>
+            </tr>
+            <tr>
+              <td><strong>Business</strong></td>
+              <td>R$219/mês</td>
+              <td>Escritórios, lojas, clínicas</td>
+              <td>2 visitas/mês + suporte remoto ilimitado + relatório mensal</td>
+            </tr>
+            <tr>
+              <td><strong>Prime</strong></td>
+              <td>R$299/mês</td>
+              <td>Empresas com alta demanda</td>
+              <td>Visitas ilimitadas + monitoramento remoto + backup automático + SLA de atendimento</td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="descricao-planos" class="muted small">Tabela de referência. Montamos propostas personalizadas conforme necessidade.</p>
+      </div>
+
+      <!-- CTA para WhatsApp com texto da proposta -->
+      <div style="text-align:center;margin-top:18px">
+        <a class="btn primary" href="https://wa.me/5538998393390?text=Ol%C3%A1!%20Quero%20uma%20proposta%20para%20empresas%20(Plano%20Essencial%2FBusiness%2FPrime)%20da%20Raiktec." target="_blank" rel="noopener">
+          Solicitar proposta para minha empresa
+        </a>
+      </div>
+
+      <!-- Diferenciais em destaque -->
+      <div class="cards" style="margin-top:32px">
         <div class="card">
           <h3>Manutenção preventiva</h3>
           <p>Revisões periódicas, limpeza, atualização e checklists — menos panes e mais produtividade.</p>
         </div>
         <div class="card">
           <h3>Segurança de dados</h3>
-          <p>Configuração de antivírus, backup e boas práticas — proteção real para o seu negócio.</p>
+          <p>Antivírus, configuração de backup e boas práticas — proteção real para o seu negócio.</p>
         </div>
         <div class="card">
           <h3>Atendimento ágil</h3>
-          <p>Suporte remoto inteligente e visitas on-site com prioridade — SLA acordado no contrato.</p>
+          <p>Suporte remoto inteligente e visitas on-site com prioridade — SLA combinado no contrato.</p>
         </div>
       </div>
     </div>
