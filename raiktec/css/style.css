@@ -1,11 +1,12 @@
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:#0b0d10;color:#e7e9ee}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,'Noto Sans',sans-serif;background:#0b0d10;color:#e7e9ee}
 a{color:inherit;text-decoration:none}
 .container{max-width:1100px;margin:0 auto;padding:0 20px}
 .nav{position:sticky;top:0;backdrop-filter:saturate(180%) blur(8px);background:rgba(11,13,16,.7);border-bottom:1px solid #1a1f26;z-index:50}
 .nav .container{display:flex;align-items:center;justify-content:space-between;height:64px}
 .nav nav a{margin-left:18px;padding:8px 10px;border-radius:10px;color:#cbd5e1}
 .nav nav a:hover{background:#1a1f26;color:#fff}
-.nav .btn{background:#2d3748;color:#fff}
 .hero{padding:72px 0 40px;background:radial-gradient(1200px 600px at 80% -10%,#1a1f26 0,#0b0d10 60%)}
 .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
 .hero h1{font-size:44px;margin:0 0 12px}
@@ -20,20 +21,32 @@ a{color:inherit;text-decoration:none}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:16px}
 .card{background:#0c0f14;border:1px solid #1a1f26;border-radius:16px;padding:18px}
-.card h3,h4{margin-top:0}
 .list{padding-left:16px}
 .list li{margin:6px 0;color:#cbd5e1}
-.note{margin-top:16px}
-.note .thumb{max-width:100%;border:1px dashed #2a3240;border-radius:12px;padding:8px;background:#0b0d10}
 .footer{padding:20px 0;border-top:1px solid #1a1f26;color:#9aa4b2}
 .footer .container{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .socials a{margin-left:14px;color:#9aa4b2}
-.muted{color:#9aa4b2}.small{font-size:12px}
+.muted{color:#9aa4b2}
+.small{font-size:12px}
 .whats{position:fixed;right:18px;bottom:18px;background:#22c55e;color:#0a0f0c;padding:12px 16px;border-radius:999px;border:1px solid #1b3a29;box-shadow:0 10px 24px rgba(0,0,0,.25)}
 .whats:hover{transform:translateY(-2px)}
+
 @media(max-width:900px){
   .hero-inner{grid-template-columns:1fr}
   .grid-2{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr}
   .nav nav a{margin-left:8px}
 }
+
+/* Pricing Section */
+.pricing{margin-top:20px}
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.price-card{background:#0c0f14;border:1px solid #1f2630;border-radius:16px;padding:20px}
+.price-card h3{margin-top:0}
+.price{font-size:18px;color:#e7e9ee;margin:6px 0 12px}
+.price-card ul{margin:0 0 16px 18px;color:#cbd5e1}
+.price-card.destaque{border-color:#3b82f6;box-shadow:0 0 0 1px #3b82f6 inset}
+@media(max-width:900px){.price-grid{grid-template-columns:1fr}}
+
+/* Header logo tweak */
+.nav .brand img{filter:brightness(1.15)}
